@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: rgb(85, 107, 47);
+
+}
+
+.animate {
+    animation: myfirst 5s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+    animation-iteration-count: infinite;
+
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*main container box*/
+body {
+    background-image: url('beige2.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.mainContainer {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+
+}
+
+/*heading content*/
+.head {
+    grid-row: 1/2;
+    width: 100%;
+
+}
+
+.navtab {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(188, 180, 180, 0.2);
+
+}
+
+.navtab a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 30px;
+    color: black;
+
+}
+
+.navtab a:hover {
+    background-color: rgb(223, 217, 217);
+}
+
+.navtab .icon {
+    display: none;
+}
+
+/*wedinvitation*/
+
+.wedinvitation {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 30px;
+    text-align: center;
+
+}
+
+.wedinvitation h1 {
+    font-family: "Rouge Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 6rem;
+    color: #4e934a;
+}
+
+
+.wedinvitation p {
+    line-height: 4rem;
+
+}
+
+/*content*/
+.content {
+    width: 100%;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wedtimer {
+    width: 100%;
+    height: 50vh;
+
+    background-image: url('kj.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.idimg {
+    height: 50vh;
+    padding: 60px;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+
+}
+
+.clock {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+
+
+}
+
+.idimg>p,
+.cbox>b {
+
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.cbox>p {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-weight: normal;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*pre wedding video*/
+
+.wedvideo {
+    width: 80%;
+    padding: 20px 30px;
+    text-align: center;
+
+}
+
+.wedvideo>b {
+    font-family: "Rouge Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #4e934a;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+
+    .mainContainer {
+        width: 100%;
+    }
+
+    /*heading content*/
+    .navtab {
+        display: inline-block;
+
+    }
+
+    .navtab a {
+
+        padding: 20px 30px;
+    }
+
+    .navtab a:not(:first-child) {
+        display: none;
+    }
+
+    .navtab a.icon {
+        float: right;
+        display: block;
+    }
+
+    .navtab.responsive {
+        position: relative;
+    }
+
+    .navtab.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navtab.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* wedinvitation*/
+
+
+    /*content*/
+    .idimg>p,
+    .cbox>b,
+    .cbox>p {
+
+        text-align: center;
+        color: white;
+        font-optical-sizing: auto;
+        font-size: 16px;
+        font-weight: normal;
+        padding: 7px;
+    }
+
+
+    .wedtimer {
+        width: 100%;
+        height: 30vh;
+
+        background-color: rgb(226, 166, 191);
+        background-image: url('kj.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fix;
+        background-size: 100% 100%;
+
+    }
+
+    .idimg {
+        height: 30vh;
+    }
+
+    /*wedvideo*/
+    .wedvideo {
+        width: 100%;
+    }
+}
